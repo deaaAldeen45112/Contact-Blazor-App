@@ -1,0 +1,266 @@
+﻿@*@page "/counter"
+@using ViewModels;
+
+<Grid TItem="Employee1"
+      Class="table table-hover table-bordered"
+      DataProvider="EmployeesDataProvider"
+      AllowFiltering="true"
+      AllowPaging="true"
+      PageSize="5"
+      AllowSorting="true"
+      Responsive="true">
+
+    <GridColumn TItem="Employee1" HeaderText="Id" PropertyName="Id" SortKeySelector="item => item.Id">
+        @context.Id
+    </GridColumn>
+    <GridColumn TItem="Employee1" HeaderText="Employee Name" PropertyName="Name" SortKeySelector="item => item.Name">
+        @context.Name
+    </GridColumn>
+    <GridColumn TItem="Employee1" HeaderText="Designation" PropertyName="Designation" SortKeySelector="item => item.Designation">
+        @context.Designation
+    </GridColumn>
+    <GridColumn TItem="Employee1" HeaderText="DOJ" PropertyName="DOJ" SortKeySelector="item => item.DOJ">
+        @context.DOJ
+    </GridColumn>
+    <GridColumn TItem="Employee1" PropertyName="IsActive" Filterable="false" Sortable="false">
+      <HeaderContent>
+        <Switch @bind-Value="IsAllChecked"/>
+      </HeaderContent>
+      <ChildContent>
+        <Switch @bind-Value="@context.IsActive"/>
+      </ChildContent>
+    </GridColumn>
+     <GridColumn TItem="Employee1" HeaderText="Actions" PropertyName="" Filterable="false" Sortable="false">
+        <ChildContent>
+            <button class="btn btn-primary btn-sm">Edit</button>
+            <button class="btn btn-danger btn-sm" @onclick="()=> DeleteEmployee(context)" >Delete</button>
+        </ChildContent>
+    </GridColumn>
+</Grid>
+
+@code {
+    private List<Employee1> employees = default!;
+
+    private bool IsAllChecked
+    {
+        get => employees.All(e => e.IsActive);
+        set => Array.ForEach(employees.ToArray(), e => e.IsActive = value);
+    }
+
+    private async Task<GridDataProviderResult<Employee1>> EmployeesDataProvider(GridDataProviderRequest<Employee1> request)
+    {
+        Console.WriteLine("EmployeesDataProvider called...");
+
+        if (employees is null) // pull employees only one time for client-side filtering, sorting, and paging
+            employees = GetEmployees(); // call a service or an API to pull the employees
+
+        return await Task.FromResult(request.ApplyTo(employees));
+    }
+    private async void DeleteEmployee(Employee1 employee)
+    {
+
+        // Remove the employee from the list
+        employees.Remove(employee);
+
+        await RefreshDataAsync();
+
+        StateHasChanged();  // Notify the UI to update
+    }
+    private List<Employee1> GetEmployees()
+    {
+        return new List<Employee1>
+        {
+            new Employee1 { Id = 107, Name = "Alice", Designation = "AI Engineer", DOJ = new DateOnly(1998, 11, 17), IsActive = true },
+            new Employee1 { Id = 103, Name = "Bob", Designation = "Senior DevOps Engineer", DOJ = new DateOnly(1985, 1, 5), IsActive = true },
+            new Employee1 { Id = 106, Name = "John", Designation = "Data Engineer", DOJ = new DateOnly(1995, 4, 17), IsActive = true },
+            new Employee1 { Id = 104, Name = "Pop", Designation = "Associate Architect", DOJ = new DateOnly(1985, 6, 8), IsActive = false },
+            new Employee1 { Id = 105, Name = "Ronald", Designation = "Senior Data Engineer", DOJ = new DateOnly(1991, 8, 23), IsActive = true },
+            new Employee1 { Id = 102, Name = "Line", Designation = "Architect", DOJ = new DateOnly(1977, 1, 12), IsActive = true },
+            new Employee1 { Id = 101, Name = "Daniel", Designation = "Architect", DOJ = new DateOnly(1977, 1, 12), IsActive = true },
+            new Employee1 { Id = 113, Name = "Merlin", Designation = "Senior Consultant", DOJ = new DateOnly(1989, 10, 2), IsActive = true },
+            new Employee1 { Id = 117, Name = "Sharna", Designation = "Data Analyst", DOJ = new DateOnly(1994, 5, 12), IsActive = true },
+            new Employee1 { Id = 108, Name = "Zayne", Designation = "Data Analyst", DOJ = new DateOnly(1991, 1, 1), IsActive = true },
+            new Employee1 { Id = 109, Name = "Isha", Designation = "App Maker", DOJ = new DateOnly(1996, 7, 1), IsActive = true },
+            new Employee1 { Id = 111, Name = "Glenda", Designation = "Data Engineer", DOJ = new DateOnly(1994, 1, 12), IsActive = true },
+        };
+    }
+
+}*@
+
+@page "/counter"
+@using ContactFrontend.Service
+@using ViewModels;
+
+
+<Button Type="ButtonType.Button" Color="ButtonColor.Primary" @onclick="AddEmployee"> Add Employee </Button>
+<Button Type="ButtonType.Button" Color="ButtonColor.Primary" @onclick="AddEmployee2"> Add Employee 2 </Button>
+
+<Grid @ref="grid" 
+      AllowFiltering="true"
+      AllowPaging="true"
+      PageSize="5"
+      AllowSorting="true"
+      Responsive="true"
+      TItem="Employee1"
+      DataProvider="EmployeesDataProvider"
+     class="table table-hover table-bordered table-striped mt-3"
+>
+    <GridColumn TItem="Employee1" HeaderText="Id" SortKeySelector="item => item.Id" SortString="Id" PropertyName="Id">
+        @context.Id
+    </GridColumn> 
+    <GridColumn TItem="Employee1" HeaderText="Employee Name" PropertyName="Name" SortKeySelector="item => item.Name">
+        @context.Name
+    </GridColumn>
+    <GridColumn TItem="Employee1" HeaderText="Designation" PropertyName="Designation">
+        @context.Designation
+    </GridColumn>
+    <GridColumn TItem="Employee1" HeaderText="DOJ" PropertyName="DOJ">
+        @context.DOJ
+    </GridColumn>
+    <GridColumn TItem="Employee1" HeaderText="Active" PropertyName="IsActive">
+        @context.IsActive
+    </GridColumn>
+
+    <GridColumn TItem="Employee1" HeaderText="Actions" PropertyName="" Filterable="false" Sortable="false">
+    
+            <button class="btn btn-danger btn-sm" @onclick="()=> DeleteEmployee(context)">Delete</button>
+     
+    </GridColumn>
+  
+</Grid>
+
+@code {
+    Grid<Employee1> grid;
+
+    private List<Employee1> employees=new List<Employee1>();
+
+    private async Task<GridDataProviderResult<Employee1>> EmployeesDataProvider(GridDataProviderRequest<Employee1> request)
+    {
+        Console.WriteLine("EmployeesDataProvider called...");
+        string sortString = "";
+        SortDirection sortDirection = SortDirection.None;
+
+        if (request.Sorting is not null && request.Sorting.Any())
+        {
+            // Note: Multi column sorting is not supported at this moment
+            sortString = request.Sorting.ToList()[0].SortString;
+            sortDirection = request.Sorting.ToList()[0].SortDirection;
+        }
+        if (employees is null) // pull employees only one time for client-side filtering, sorting, and paging
+            employees = await GetEmployees(); // call a service or an API to pull the employees
+
+        return await Task.FromResult(request.ApplyTo(employees));
+    }
+    protected override void OnInitialized()
+    {
+ 
+    }
+    @inject ContactService ContactService
+    private async Task<List<Employee1>> GetEmployees()
+    {
+
+
+       
+        await ContactService.GetContactsAsync();
+        return new List<Employee1>
+        {
+            new Employee1 { Id = 107, Name = "Alice", Designation = "AI Engineer", DOJ = new DateOnly(1998, 11, 17), IsActive = true },
+            new Employee1 { Id = 103, Name = "Bob", Designation = "Senior DevOps Engineer", DOJ = new DateOnly(1985, 1, 5), IsActive = true },
+            new Employee1 { Id = 106, Name = "John", Designation = "Data Engineer", DOJ = new DateOnly(1995, 4, 17), IsActive = true },
+            new Employee1 { Id = 104, Name = "Pop", Designation = "Associate Architect", DOJ = new DateOnly(1985, 6, 8), IsActive = false },
+            new Employee1 { Id = 105, Name = "Ronald", Designation = "Senior Data Engineer", DOJ = new DateOnly(1991, 8, 23), IsActive = true },
+            new Employee1 { Id = 102, Name = "Line", Designation = "Architect", DOJ = new DateOnly(1977, 1, 12), IsActive = true },
+            new Employee1 { Id = 101, Name = "Daniel", Designation = "Architect", DOJ = new DateOnly(1977, 1, 12), IsActive = true },
+            new Employee1 { Id = 113, Name = "Merlin", Designation = "Senior Consultant", DOJ = new DateOnly(1989, 10, 2), IsActive = true },
+            new Employee1 { Id = 117, Name = "Sharna", Designation = "Data Analyst", DOJ = new DateOnly(1994, 5, 12), IsActive = true },
+            new Employee1 { Id = 108, Name = "Zayne", Designation = "Data Analyst", DOJ = new DateOnly(1991, 1, 1), IsActive = true },
+            new Employee1 { Id = 109, Name = "Isha", Designation = "App Maker", DOJ = new DateOnly(1996, 7, 1), IsActive = true },
+            new Employee1 { Id = 111, Name = "Glenda", Designation = "Data Engineer", DOJ = new DateOnly(1994, 1, 12), IsActive = true },
+        };
+    }
+    private async void DeleteEmployee(Employee1 employee)
+    {
+
+        // Remove the employee from the list
+        employees.Remove(employee);
+
+        await grid.RefreshDataAsync();
+
+        StateHasChanged();  // Notify the UI to update
+    }
+    private async Task AddEmployee()
+    {
+        // for the same employees collection, we are adding an object
+        // explicit grid refresh required
+        employees.Add(CreateEmployee());
+        await grid.RefreshDataAsync();
+    }
+
+    private void AddEmployee2()
+    {
+        // creates a shallow copy
+        var emps = employees.GetRange(0, employees.Count);
+        emps.Add(CreateEmployee());
+        // now employees variable has a new reference. So no need to refresh the grid explicitly
+        // explicit grid refresh is not required
+        employees = emps;
+    }
+
+    private Employee1 CreateEmployee()
+    {
+        var emp = new Employee1();
+        emp.Id = employees.Max(x => x.Id) + 1;
+        emp.Name = $"Employee {emp.Id}";
+        emp.Designation = $"QA Engineer {emp.Id}";
+        emp.DOJ = new DateOnly(new Random().Next(1970, 2000), new Random().Next(1, 12), new Random().Next(1, 25));
+        emp.IsActive = true;
+        return emp;
+    }
+}@*
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var contact in contacts)
+            {
+                <tr>
+                    <td>@contact.FirstName</td>
+                    <td>@contact.LastName</td>
+                    <td>@contact.Email</td>
+                    <td>@contact.PhoneNumber</td>
+                    <td>
+                        <button @onclick="()=>{showEditContactModal=true;
+
+
+                        currentContact.FirstName=contact.FirstName;
+                        currentContact.ContactId=contact.ContactId;
+                        currentContact.Email=contact.Email;
+                        currentContact.LastName=contact.LastName;
+                        currentContact.PhoneNumber=contact.PhoneNumber;
+
+                        ;
+                        }" class="btn btn-primary">Edit Contact</button>
+
+                        <button class="btn btn-danger" @onclick="()=>{
+
+                            showConfirmDeleteContactModal=true;
+                        currentContact.ContactId=contact.ContactId;
+
+
+                        ;
+                        }">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@

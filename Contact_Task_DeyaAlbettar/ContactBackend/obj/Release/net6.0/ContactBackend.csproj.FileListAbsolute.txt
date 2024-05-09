@@ -1,0 +1,80 @@
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\appsettings.Development.json
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\appsettings.json
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\ContactBackend.exe
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\ContactBackend.deps.json
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\ContactBackend.runtimeconfig.json
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\ContactBackend.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\ContactBackend.pdb
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\SharedModels.dll
+C:\Users\user\Desktop\New folder\ContactBackend\bin\Release\net6.0\SharedModels.pdb
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ContactBackend.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ContactBackend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ContactBackend.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ContactBackend.AssemblyInfo.cs
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ContactBackend.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ContactBackend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ContactBackend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\staticwebassets.build.json
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\staticwebassets.development.json
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\scopedcss\bundle\ContactBackend.styles.css
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ContactBackend.csproj.CopyComplete
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ContactBackend.dll
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\refint\ContactBackend.dll
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ContactBackend.pdb
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ContactBackend.genruntimeconfig.cache
+C:\Users\user\Desktop\New folder\ContactBackend\obj\Release\net6.0\ref\ContactBackend.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\appsettings.Development.json
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\appsettings.json
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\ContactBackend.exe
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\ContactBackend.deps.json
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\ContactBackend.runtimeconfig.json
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\ContactBackend.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\ContactBackend.pdb
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\SharedModels.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\bin\Release\net6.0\SharedModels.pdb
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ContactBackend.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ContactBackend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ContactBackend.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ContactBackend.AssemblyInfo.cs
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ContactBackend.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ContactBackend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ContactBackend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\staticwebassets.build.json
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\staticwebassets.development.json
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\scopedcss\bundle\ContactBackend.styles.css
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ContactBackend.csproj.CopyComplete
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ContactBackend.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\refint\ContactBackend.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ContactBackend.pdb
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ContactBackend.genruntimeconfig.cache
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\ContactBackend\obj\Release\net6.0\ref\ContactBackend.dll

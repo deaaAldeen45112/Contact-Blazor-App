@@ -1,0 +1,28 @@
+﻿@page "/contacts"
+@using Contact_Task_DeyaAlbettar.Service
+@using SharedModels.Models
+@inject ContactService ContactService
+
+@*<h1>Contacts</h1>
+<button @onclick="ToggleModal" class="btn btn-primary">Create Contact</button>
+*@
+<Contact_Task_DeyaAlbettar.Component.AddContact> </Contact_Task_DeyaAlbettar.Component.AddContact>
+
+
+
+
+@code {
+    //private bool showModal = false; // Define the showModal variable
+
+    //private void ToggleModal()
+    //{
+    //    showModal = !showModal;
+    //    StateHasChanged();
+    //}
+
+    //private void HandleModalClose()
+    //{
+    //    showModal = false; 
+    //    StateHasChanged();
+    //}
+}

@@ -1,0 +1,62 @@
+﻿@using SharedModels.Models
+@using System.ComponentModel.DataAnnotations
+
+@*<div class="modal fade show" style="display:block; background-color: rgba(0,0,0,0.5);" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Contact</h5>
+                <button type="button" class="close" @onclick="() => OnClose.InvokeAsync()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <EditForm Model="@contact" OnValidSubmit="HandleValidSubmit">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <InputText id="firstName" class="form-control" @bind-Value="contact.FirstName" />
+                        <ValidationMessage For="@(() => contact.FirstName)" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <InputText id="lastName" class="form-control" @bind-Value="contact.LastName" />
+                        <ValidationMessage For="@(() => contact.LastName)" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <InputText id="email" class="form-control" type="email" @bind-Value="contact.Email" />
+                        <ValidationMessage For="@(() => contact.Email)" />
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <InputText id="phoneNumber" class="form-control" @bind-Value="contact.PhoneNumber" />
+                        <ValidationMessage For="@(() => contact.PhoneNumber)" />
+                    </div>
+                </EditForm>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" @onclick="() => OnClose.InvokeAsync()">Close</button>
+                <button type="submit" class="btn btn-primary">Add Contact</button>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+
+<h1>deaa</h1>
+@code {
+    //[Parameter]
+    //public EventCallback OnClose { get; set; }
+
+    //private Contact contact = new Contact();
+
+    //private async Task HandleValidSubmit()
+    //{
+    //    await ContactService.CreateContactAsync(contact);
+    //    await OnClose.InvokeAsync();
+    //    contact = new Contact(); // Reset the form after submission
+    //}
+}

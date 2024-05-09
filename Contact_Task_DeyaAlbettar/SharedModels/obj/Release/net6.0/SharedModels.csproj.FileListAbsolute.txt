@@ -1,0 +1,24 @@
+C:\Users\user\Desktop\New folder\SharedModels\bin\Release\net6.0\SharedModels.deps.json
+C:\Users\user\Desktop\New folder\SharedModels\bin\Release\net6.0\SharedModels.dll
+C:\Users\user\Desktop\New folder\SharedModels\bin\Release\net6.0\SharedModels.pdb
+C:\Users\user\Desktop\New folder\SharedModels\obj\Release\net6.0\SharedModels.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\New folder\SharedModels\obj\Release\net6.0\SharedModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\New folder\SharedModels\obj\Release\net6.0\SharedModels.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\New folder\SharedModels\obj\Release\net6.0\SharedModels.AssemblyInfo.cs
+C:\Users\user\Desktop\New folder\SharedModels\obj\Release\net6.0\SharedModels.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\New folder\SharedModels\obj\Release\net6.0\SharedModels.dll
+C:\Users\user\Desktop\New folder\SharedModels\obj\Release\net6.0\refint\SharedModels.dll
+C:\Users\user\Desktop\New folder\SharedModels\obj\Release\net6.0\SharedModels.pdb
+C:\Users\user\Desktop\New folder\SharedModels\obj\Release\net6.0\ref\SharedModels.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\bin\Release\net6.0\SharedModels.deps.json
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\bin\Release\net6.0\SharedModels.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\bin\Release\net6.0\SharedModels.pdb
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\obj\Release\net6.0\SharedModels.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\obj\Release\net6.0\SharedModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\obj\Release\net6.0\SharedModels.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\obj\Release\net6.0\SharedModels.AssemblyInfo.cs
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\obj\Release\net6.0\SharedModels.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\obj\Release\net6.0\SharedModels.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\obj\Release\net6.0\refint\SharedModels.dll
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\obj\Release\net6.0\SharedModels.pdb
+C:\Users\user\source\repos\deaaAldeen45112\Contact-Blazor-App\Contact_Task_DeyaAlbettar\SharedModels\obj\Release\net6.0\ref\SharedModels.dll

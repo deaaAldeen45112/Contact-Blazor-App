@@ -1,0 +1,170 @@
+﻿@page "/contacts"
+@using ContactFrontend.Service
+@using SharedModels.Models
+@using ContactFrontend.Component;
+@inject ContactService ContactService
+
+<h3>Contacts</h3>
+
+
+
+@if (contacts == null)
+{
+    <div class="d-flex justify-content-center">
+        <Spinner Type="SpinnerType.Border" Color="SpinnerColor.Primary" />
+    </div>
+}
+else
+{
+
+
+    
+<button @onclick="ToggleModal" class="btn btn-primary">Create Contact</button>
+
+    <Grid @ref="grid" 
+      AllowFiltering="true"
+      AllowPaging="true"
+      PageSize="5"
+      AllowSorting="true"
+      Responsive="true"
+      TItem="Contact"
+      DataProvider="ContactsDataProvider"
+     class="table table-hover table-bordered table-striped mt-3"
+>
+        <GridColumn TItem="Contact" HeaderText="Id" SortKeySelector="item => item.ContactId" SortString="ContactId" PropertyName="ContactId">
+            @context.ContactId
+    </GridColumn>
+        <GridColumn TItem="Contact" HeaderText="First Name" PropertyName="FirstName" SortKeySelector="item => item.FirstName">
+        @context.FirstName
+    </GridColumn>
+        <GridColumn TItem="Contact" HeaderText="LastName" PropertyName="LastName" SortKeySelector="item => item.LastName">
+        @context.LastName
+    </GridColumn>
+        <GridColumn TItem="Contact" HeaderText="Email" PropertyName="Email" SortKeySelector="item => item.Email">
+            @context.Email
+        </GridColumn>
+        <GridColumn TItem="Contact" HeaderText="PhoneNumber" PropertyName="PhoneNumber" SortKeySelector="item => item.PhoneNumber">
+        @context.PhoneNumber
+    </GridColumn>
+     
+    <GridColumn TItem="Contact" HeaderText="Delete" PropertyName="" Filterable="false" Sortable="false">
+            <button class="btn btn-danger btn-sm" @onclick="()=> {
+
+              showConfirmDeleteContactModal=true;
+              currentContact.ContactId=context.ContactId;
+            }">
+                Delete
+            </button>
+    </GridColumn>
+     <GridColumn TItem="Contact" HeaderText="Edit" PropertyName="" Filterable="false" Sortable="false">
+            <button class="btn btn-primary btn-sm" @onclick="()=> {
+                
+             showEditContactModal=true; 
+                            
+                            
+                        currentContact.FirstName=context.FirstName;
+                        currentContact.ContactId=context.ContactId;
+                        currentContact.Email=context.Email;
+                        currentContact.LastName=context.LastName;
+                        currentContact.PhoneNumber=context.PhoneNumber;
+            }">
+                Edit
+            </button>
+        </GridColumn>
+</Grid>
+
+
+
+
+
+
+
+}
+
+
+
+
+@if (showAddContactModal == true) { 
+    <AddContact OnClose="HandleModalClose" ShowToast="ShowMessage" ReLoadContacts="ReLoadContacts"></AddContact>
+}
+
+@if (showEditContactModal == true)
+{
+    <EditContact OnClose="()=>showEditContactModal=false" ReLoadContacts="ReLoadContacts" ShowToast="ShowMessage" contact="currentContact"></EditContact>
+}
+
+@if (showConfirmDeleteContactModal == true)
+{
+    <ConfirmDeleteModal OnClose="()=>showConfirmDeleteContactModal=false" ReLoadContacts="ReLoadContacts" ShowToast="ShowMessage" contact="currentContact"></ConfirmDeleteModal>
+}
+
+
+
+
+
+
+<Toasts class="p-3" AutoHide="true" Delay="2000" Messages="messages" Placement="ToastsPlacement.BottomCenter" />
+@code {
+    Grid<Contact> grid;
+
+    List<ToastMessage> messages = new List<ToastMessage>();
+
+    Contact currentContact = new Contact();
+
+    private void ShowMessage(ToastMessage toastMessage) => messages.Add(toastMessage);
+
+    private List<Contact> contacts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        contacts = await ContactService.GetContactsAsync();
+    }
+
+    private ToastMessage CreateToastMessage(ToastType toastType, string message)
+    => new ToastMessage
+        {
+            Type = toastType,
+            Title = "Note",
+            HelpText = $"{DateTime.Now}",
+            Message = message,
+        };
+
+    private bool showAddContactModal = false; 
+
+    private bool showEditContactModal=false;
+
+    private bool showConfirmDeleteContactModal=false;
+
+    private void ToggleModal()
+    {
+        showAddContactModal = !showAddContactModal;
+
+    }
+
+    private void HandleModalClose()
+    {
+        showAddContactModal = false;
+
+    }
+
+    private async Task ReLoadContacts() {
+
+
+        contacts=await ContactService.GetContactsAsync();
+        await grid.RefreshDataAsync();
+        
+    }
+
+    private async Task<GridDataProviderResult<Contact>> ContactsDataProvider(GridDataProviderRequest<Contact> request)
+    {
+
+        if (contacts is null) { 
+            //contacts = await ContactService.GetContactsAsync();
+            //StateHasChanged();
+        }
+        
+        return await Task.FromResult(request.ApplyTo(contacts));
+    }
+
+
+}
